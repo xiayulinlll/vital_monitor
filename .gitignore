@@ -1,0 +1,30 @@
+# CMake / Ninja 构建产物
+/build/
+build/
+*.ninja
+CMakeCache.txt
+CMakeFiles/
+
+# Qt / 编译产物
+*.obj
+*.o
+*.exe
+*.dll
+*.a
+*.so
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+*_autogen/
+
+# IDE
+.vs/
+*.user
+*.user.*
+
+# 运行时导出的数据
+*.csv
+!docs/*.csv
+trend_*.png
+trend_*.jpg
+vital_*.csv

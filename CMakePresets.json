@@ -1,0 +1,62 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 19,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "mingw-debug",
+            "displayName": "MinGW 64-bit Debug",
+            "description": "Qt 6.2.4 / MinGW 11.2.0 64-bit (Debug)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/vscode-mingw-debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_PREFIX_PATH": "D:/qt6/6.2.4/mingw_64",
+                "CMAKE_MAKE_PROGRAM": "D:/qt6/Tools/Ninja/ninja.exe",
+                "CMAKE_C_COMPILER": "D:/qt6/Tools/mingw1120_64/bin/gcc.exe",
+                "CMAKE_CXX_COMPILER": "D:/qt6/Tools/mingw1120_64/bin/g++.exe"
+            },
+            "environment": {
+                "PATH": "D:/qt6/Tools/mingw1120_64/bin;D:/qt6/6.2.4/mingw_64/bin;$penv{PATH}"
+            }
+        },
+        {
+            "name": "mingw-release",
+            "displayName": "MinGW 64-bit Release",
+            "description": "Qt 6.2.4 / MinGW 11.2.0 64-bit (Release)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/vscode-mingw-release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_PREFIX_PATH": "D:/qt6/6.2.4/mingw_64",
+                "CMAKE_MAKE_PROGRAM": "D:/qt6/Tools/Ninja/ninja.exe",
+                "CMAKE_C_COMPILER": "D:/qt6/Tools/mingw1120_64/bin/gcc.exe",
+                "CMAKE_CXX_COMPILER": "D:/qt6/Tools/mingw1120_64/bin/g++.exe"
+            },
+            "environment": {
+                "PATH": "D:/qt6/Tools/mingw1120_64/bin;D:/qt6/6.2.4/mingw_64/bin;$penv{PATH}"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "mingw-debug",
+            "displayName": "MinGW 64-bit Debug",
+            "configurePreset": "mingw-debug",
+            "environment": {
+                "PATH": "D:/qt6/Tools/mingw1120_64/bin;D:/qt6/6.2.4/mingw_64/bin;$penv{PATH}"
+            }
+        },
+        {
+            "name": "mingw-release",
+            "displayName": "MinGW 64-bit Release",
+            "configurePreset": "mingw-release",
+            "environment": {
+                "PATH": "D:/qt6/Tools/mingw1120_64/bin;D:/qt6/6.2.4/mingw_64/bin;$penv{PATH}"
+            }
+        }
+    ]
+}

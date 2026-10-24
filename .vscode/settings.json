@@ -1,0 +1,27 @@
+{
+    "files.associations": {
+        "*.ui": "xml",
+        "*.pro": "makefile"
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "cmake.configureOnOpen": false,
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/src",
+        "D:/qt6/6.2.4/mingw_64/include",
+        "D:/qt6/6.2.4/mingw_64/include/QtCore",
+        "D:/qt6/6.2.4/mingw_64/include/QtGui",
+        "D:/qt6/6.2.4/mingw_64/include/QtWidgets"
+    ],
+    "C_Cpp.default.defines": [
+        "QT_CORE_LIB",
+        "QT_GUI_LIB",
+        "QT_WIDGETS_LIB",
+        "UNICODE",
+        "_UNICODE"
+    ],
+    "files.encoding": "utf8",
+    "files.autoGuessEncoding": false
+}

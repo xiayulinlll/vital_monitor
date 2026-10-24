@@ -1,0 +1,57 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug vital_monitor (MinGW / gdb)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/vscode-mingw-debug/vital_monitor.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/vscode-mingw-debug",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "D:/qt6/Tools/mingw1120_64/bin;D:/qt6/6.2.4/mingw_64/bin;${env:PATH}"
+                }
+            ],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:/qt6/Tools/mingw1120_64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "CMake: Build (mingw-debug)"
+        },
+        {
+            "name": "Release vital_monitor (MinGW)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/vscode-mingw-release/vital_monitor.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/vscode-mingw-release",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "D:/qt6/Tools/mingw1120_64/bin;D:/qt6/6.2.4/mingw_64/bin;${env:PATH}"
+                }
+            ],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:/qt6/Tools/mingw1120_64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "CMake: Build (mingw-release)"
+        }
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake: Configure (mingw-debug)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--preset",
+                "mingw-debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "CMake: Build (mingw-debug)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "--preset",
+                "mingw-debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "CMake: Build (mingw-release)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "--preset",
+                "mingw-release"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "Run vital_monitor (debug)",
+            "type": "shell",
+            "command": "${workspaceFolder}/build/vscode-mingw-debug/vital_monitor.exe",
+            "options": {
+                "cwd": "${workspaceFolder}/build/vscode-mingw-debug"
+            },
+            "dependsOn": "CMake: Build (mingw-debug)",
+            "problemMatcher": []
+        },
+        {
+            "label": "Clean build dir",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "--preset",
+                "mingw-debug",
+                "--target",
+                "clean"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
